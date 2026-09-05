@@ -5,24 +5,25 @@ name: Hello
 
 # When the workflow runs
 on:
-
   push:
-    
 
-#what the workflow does
+# What the workflow does
 jobs:
 
-#name of your jobs
+  # Name of your job
   great:
-  #where the jobs run OS
+    # Where the job runs (OS)
     runs-on: ubuntu-latest
-    # the sequence of steps the job does
+
+    # The sequence of steps the job does
     steps:
       - name: Say Hello
         run: echo "Hello World"
 
-repo-name:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Show repo run-name
-      run : exho "The Repo name is hero"
+  repo-name:
+    needs: great
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show repo run-name
+        run: echo "The Repo name is hero"
