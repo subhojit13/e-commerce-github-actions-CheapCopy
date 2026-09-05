@@ -5,8 +5,9 @@ name: Hello
 
 # When the workflow runs
 on:
+
   push:
-    branches: [main]
+    
 
 #what the workflow does
 jobs:
