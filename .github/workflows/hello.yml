@@ -20,3 +20,9 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello World"
+
+repo-name:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Show repo run-name
+      run : exho "The Repo name is hero"
